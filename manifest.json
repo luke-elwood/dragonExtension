@@ -1,0 +1,23 @@
+﻿{
+  "name": "Dragon Extension",
+  "version": "1.0",
+	"author": "Luke Elwood",
+  "manifest_version": 2,
+  "description": "Dragon Second Round Extension",
+  "icons": {
+    "128": "icons/dragonLogo.png"
+  },
+	"browser_action": {
+		"default_icon": "icons/dragonLogo.png",
+		"default_popup": "popup.html",
+		"default_title": "Dragon Dom Elements"
+	},
+	"content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["js/app/content.js"]
+  }
+]
+}

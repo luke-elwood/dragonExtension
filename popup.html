@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="DragonChromeExt" ng-csp>
+    <head>
+        <link rel="stylesheet" href="css/popup.css">
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/popup.js"></script>
+    </head>
+    <body id="popup">
+			<div ng-controller="ngController">
+					<h3>Dom Elements: </h3>
+					<ul>
+							<li ng-repeat="(key, value) in pageElements">
+									<h4>{{key}} ({{value.length}})</h4>
+									<ul>
+										<li ng-repeat="n in value">
+											{{n}}
+										</li>
+									</ul>
+							</li>                       
+					</ul>
+			</div>
+    </body>
+</html>
